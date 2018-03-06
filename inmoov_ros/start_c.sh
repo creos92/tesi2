@@ -1,5 +1,8 @@
 #!/bin/bash
 source ./devel/setup.bash
+printf %s "inserisci indirizzo ip:"
+read -r var
+sed -i "s/indirizzoipserver/$var/g" ../Client/certificati/client1/client.conf 
 chmod +rx start_play.sh /Client/certificati/client1/start_client.sh &&
 cd /Client/certificati/client1 && sync && ./start_client.sh &
 sleep 15s
