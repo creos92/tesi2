@@ -1,8 +1,9 @@
 Da linea di comando:
 Lato server:
 su root 
-xhost +local:root 
 svn checkout https://github.com/creos92/thesis.git/trunk/DockerfileServer
+xhost +local:root 
+cd DockefileServer
 docker build DockerfileServer/ -t parloma:server
 docker-compose up
 
@@ -10,6 +11,7 @@ Lato Client:
 su root
 svn checkout https://github.com/creos92/thesis.git/trunk/DockerfileClient
 docker build DockerfileClient/ -t parloma:client
+cd DockefileClient
 docker-compose run -e IP=192.168.0.107 parloma_client 
 
 Altro:
