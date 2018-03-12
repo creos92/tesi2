@@ -3,8 +3,8 @@ Lato server:
 su root 
 svn checkout https://github.com/creos92/thesis.git/trunk/DockerfileServer
 xhost +local:root 
-cd DockefileServer
 docker build DockerfileServer/ -t parloma:server
+cd DockefileServer
 docker-compose up
 
 Lato Client:
