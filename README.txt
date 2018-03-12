@@ -10,8 +10,7 @@ Lato Client:
 su root
 svn checkout https://github.com/creos92/thesis.git/trunk/DockerfileClient
 docker build DockerfileClient/ -t parloma:client
-docker-compose run parloma_client
-
+docker-compose run -e IP=192.168.0.107 parloma_client 
 
 Altro:
 Download del file
